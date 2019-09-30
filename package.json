@@ -1,0 +1,22 @@
+{
+  "name": "codepipelinenodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js --no-deprecation",
+    "test": "mocha ./tests --recursive --timeout 15000 --no-deprecation --exit"
+  },
+  "author": "yashvardhan-kukreja",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mocha": "^6.2.0",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "should": "^13.2.3"
+  }
+}

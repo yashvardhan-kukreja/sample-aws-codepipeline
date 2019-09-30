@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - echo Installing Mocha...
+      - npm install -g mocha
+  pre_build:
+    commands:
+      - echo installing the source npm dependencies...
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`...
+      - npm test
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
+artifacts:
+  files:
+    - app.js
+    - tests.js
+    - codedeploy/*
+    - package*.json
+    - .gitignore
+    - appspec.yml
+    - buildspec.yml
+    - node_modules/express/*
